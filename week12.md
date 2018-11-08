@@ -35,8 +35,8 @@
             The base class is animal.
             """
 
-            def __init__(self, name="", owner="Jane Doe", rabiesShot=True):
-                animal.__init__(self)  # Call base class constructor
+            def __init__(self, name="", owner="Jane Doe", rabiesShot=True, group="mammals", endangered=False):
+                animal.__init__(self,group,endangered)  # Call base class constructor
                 self.name = name
                 self.owner = owner
                 self.rabiesShot = rabiesShot
@@ -158,7 +158,14 @@
         except AssertionError:
             print("You didn't enter a word with five letters!")
 
-- What's this `assert` thing?
+- What's this `assert` thing? It's basically doing the same thing as this.
+
+        try:
+            myWord = input("Enter a word with five letters: ")
+            if (len(myWord) != 5):
+                raise ValueError
+        except ValueError:
+            print("You didn't enter a word with five letters!")
 
 - But let's say you wanted the user to have the opportunity to keep entering words until they provided one that met your criterion.
 
@@ -173,6 +180,31 @@
 - Let's unpack this. What's going on here?
 
 - You can also define your own types of exceptions.
+
+        class wordLengthError(Exception):
+            """
+            Exception raised when word is not the right length.
+            """
+
+            def __init__(self,message):
+                self.message = message
+
+        try:
+            myWord = input("Enter a word with five letters: ")
+            if (len(myWord) != 5):
+                raise wordLengthError("Word not five letters!")
+        except wordLengthError:
+            print(wordLengthError.message)
+
+
+## Weekly Assignment
+
+- Send me your short examples of a base class and derived class, as well as a try/except statement. These don't have to be long, I just want to know that you can get them to work.
+
+- Set up a shared repository for your team for the final project. Every team member should commit something to this repository.
+
+- Define one new class to be used in your final project, and (as least in pseudocode) give the attributes and methods for this class.
+
 
 ## Resources
 - [Official Python Tutorial - Class Inheritance](https://docs.python.org/3.7/tutorial/classes.html#inheritance)
