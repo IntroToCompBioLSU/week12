@@ -50,6 +50,7 @@
         fido.summarize()
 
 - But let's say that you want to be able to use one summarize function that includes all the properties of a generic animal as well as a pet. In this case, you can _override_ the summarize method in the _derived_ class - `pets`.
+
         class pet(animal):
             """
             A class to store information about animals that are pets.
@@ -68,6 +69,7 @@
 
 
 - Here are some other examples of hierarchical categories that might take advantage of inheritance:
+
         cars:
             trucks
             vans
@@ -109,11 +111,13 @@
 - However, other errors occur at runtime, and are known as Exceptions. These aren't due to improper syntax, but rather due to attempts to do things that simply don't make sense (for example, performing a mathematic operation with a string).
 - By default, Python stops execution when Exceptions are raised and trys to print out an informative error message (listing the type of Exception and the lines it tried to execute when the problem occurred). However, you the programmer can dictate what happens when different types of Exceptions are raised.
 - To dictate how a program handles exceptions, you will need to use `try` and `except` statements. Code inside the `try` will be monitored for any Exceptions that could occur. If one does occur, then execution immediately shifts to the code in the `except` block. If no Exception is raised, then the `except` block is never executed.
+
         try:
             filename = "input.txt"
             inputFile = open(filename,'r')
         except OSError:
             print("There is no file called %s." % (filename))
+
 - Code in `except` blocks allow you to handle expected problems in an organized way, often providing the user (or you) with an informative message that lets them know what they should do next.
 - Ideally, `except` blocks should only catch those exceptions that are expected (in this case, an `OSError`). If you don't specify an exception type, they will catch all exceptions (even ones you may not have anticipated) and lead to unexpected behavior or non-sensical error messages. To illustrate this difference, compare what happens with this code block:
 
