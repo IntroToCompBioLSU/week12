@@ -8,6 +8,7 @@
 - More specific levels of the hierarchy can inherit attributes and methods from higher levels.
 - To make this more concrete, let's think about an example using animals.
 - First, let's define a generic class for `animal`s:
+
         class animal:
             """A class to store information about any animal"""
 
@@ -23,6 +24,7 @@
 
 
 - Now, let's think about a specific set of `animal`s that might have different properties - `pet`s:
+
         class pet(animal):
             """
             A class to store information about animals that are pets.
@@ -40,9 +42,11 @@
                 print("%s has now had a rabies shot." % (self.name))
 
 - In this case, `pet`s are a specific kind of `animal`. They share all the properties of a generic `animal` with non-`pet`s, but they also have a specific set of properties that are unique to pets (name, owner, and rabies shot status). To see how this works, let's create a new pet.
+
         fido = pet(name="Fido",owner="Adam Hurm",rabiesShot=False)
 
 - Because `fido` is a pet, it automatically inherits the properties (attributes and methods) of the base class `animal`.
+
         fido.summarize()
 
 - But let's say that you want to be able to use one summarize function that includes all the properties of a generic animal as well as a pet. In this case, you can _override_ the summarize method in the _derived_ class - `pets`.
