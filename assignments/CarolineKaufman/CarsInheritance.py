@@ -22,3 +22,5 @@ class Category(Car):   #derived class
 obj = Category(1500, 'Toyota')
 obj.disp_name()
 obj.display()
+
+# DB: Good!
