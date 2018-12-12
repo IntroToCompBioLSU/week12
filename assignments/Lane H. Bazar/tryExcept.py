@@ -9,3 +9,5 @@ try:
 #if the input is not a three letter word: yes
 except AssertionError:
 	print("You have answered no. Proceeding further requires the user to answer yes. Program is now ending.")
+
+# DB: Good!

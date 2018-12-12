@@ -27,3 +27,5 @@ class shirt(clothes):
 
 tshirt= shirt(size="S", color="blue", sleeves="3/4")
 tshirt.summarize()
+
+# DB: Great example!
