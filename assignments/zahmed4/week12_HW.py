@@ -26,3 +26,4 @@ class SUV(cars):
 vehicle= cars(size="L", color="blue")
 vehicle.summarize()
 
+# DB: Looks good!

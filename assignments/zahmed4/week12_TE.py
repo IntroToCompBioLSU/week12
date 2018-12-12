@@ -7,6 +7,8 @@ while True:
    except ValueError:
       print("That was not a number, don't worry, everyone makes typos. Please try again. ")
 
+# DB: Nice example! One thing: it's best not to use 'int' as a variable name.
+
 """while True:
             try:
                 myWord = input("Enter a word with five letters: ")
