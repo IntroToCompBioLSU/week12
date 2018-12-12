@@ -59,3 +59,6 @@ while True:
 #if not the correct input error message is printed
 	except AssertionError:
 		print("You didn't enter a correct item number. Try \"ItemOne\"")
+
+# DB: I like these examples a lot, although I wasn't able to throw an AssertionError. You
+#     might need to add an assert statement for that.
