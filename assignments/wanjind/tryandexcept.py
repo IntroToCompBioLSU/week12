@@ -4,3 +4,5 @@ try:
     i=int("s")
 except ValueError:
     print ("could not convert data into an integer")
+
+# DB: Nice example!

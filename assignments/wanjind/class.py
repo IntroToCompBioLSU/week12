@@ -38,3 +38,5 @@ gue=vans(200)
 gue.hotcake()
 gud=trucks("blue","merc")
 gud.new()
+
+# DB: Good!
