@@ -38,3 +38,5 @@ print()
 rna.summary()
 print()
 protien.summary()
+
+# DB: I really like these examples! Did you attempt a try...except block?
