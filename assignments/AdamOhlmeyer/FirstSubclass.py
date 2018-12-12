@@ -4,7 +4,7 @@
 class Employee:
 
 #Setting the raise amount for employees
-	raiseAmt = 1.05
+	raiseAmt = 1.05		# DB: Probably want this in the constructor.
 
 	def __init__(self, first, last, pay):
 		self.first = first
@@ -18,7 +18,7 @@ class Employee:
 #Defining a subclass for employees that are managers
 class Manager(Employee):
 	
-	raiseAmt = 1.15
+	raiseAmt = 1.15		# DB: Probably want this in the constructor.
 
 	def __init__(self, first, last, pay, favColor):
 		Employee.__init__(self, first, last, pay)
@@ -39,3 +39,5 @@ print(man1.pay)
 print("The Intimidator's Pay After Raise:")
 man1.applyRaise()
 print(man1.pay)
+
+# DB: Good!
